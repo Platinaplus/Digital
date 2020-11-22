@@ -40,4 +40,15 @@ $(function(){
           top = $(id).offset().top;
         $("body,html").animate({ scrollTop: top }, 1500);
       });
+
+      $('.call__btn').on('click', (e) => {
+        e.preventDefault();
+        $('.modal').addClass('visible')
+      });
+
+      $('.modal__close').on('click', (e) => {
+        e.preventDefault();
+        $('.modal').removeClass('visible')
+      });
+
 });
